@@ -1,0 +1,44 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "baseBranches": ["main","master"],
+  "extends": ["config:recommended"],
+  "ignorePresets": ["workarounds:javaLTSVersions"],
+  "assignees": ["Hc747"],
+  "prHourlyLimit": 15,
+  "dependencyDashboard": true,
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": "major",
+      "addLabels": ["major"]
+    },
+    {
+      "matchUpdateTypes": "minor",
+      "addLabels": ["minor"]
+    },
+    {
+      "matchUpdateTypes": "patch",
+      "addLabels": ["patch"]
+    },
+    {
+      "matchPackagePatterns": ["^com.google.protobuf", "^io.grpc"],
+      "groupName": "gRPC dependencies",
+      "addLabels": ["gRPC"]
+    },
+    {
+      "matchPackagePatterns": "^io.micronaut",
+      "groupName": "Micronaut dependencies",
+      "addLabels": ["micronaut"]
+    },
+    {
+      "matchPackagePatterns": "^software.amazon.awssdk",
+      "groupName": "AWS SDK dependencies",
+      "addLabels": ["aws-sdk"]
+    },
+    {
+      "matchCategories": "terraform",
+      "groupName": "Terraform dependencies",
+      "addLabels": ["terraform"]
+    }
+  ]
+}

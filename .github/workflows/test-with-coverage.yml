@@ -85,7 +85,7 @@ jobs:
 
       - name: Upload coverage report to Codecov
         if: steps.check_secret.outputs.exists == 'true'
-        uses: codecov/codecov-action@v4.1.0
+        uses: codecov/codecov-action@v4.6.0
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: GregHib/void

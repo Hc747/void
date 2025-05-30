@@ -88,7 +88,7 @@ reporting {
     reports {
         @Suppress("UnstableApiUsage")
         create("jacocoMergedReport", JacocoCoverageReport::class) {
-            testType = TestSuiteType.UNIT_TEST
+//            testType = TestSuiteType.UNIT_TEST
         }
     }
 }

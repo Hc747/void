@@ -47,7 +47,7 @@ jobs:
 
       - name: Restore game cache files from cache
         id: cache-files
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           key: cache-${{ env.cache_version }}-${{ hashFiles('data/cache/main_file_cache.idx255') }}
           path: data/cache/
